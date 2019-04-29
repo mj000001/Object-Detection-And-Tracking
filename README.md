@@ -1,6 +1,27 @@
 # Automatic-Detection-And-Tracking
-Target detection in the first frame and Tracking target by SiamRPN.
+Objects detection in the first frame and Tracking special object by SiamRPN.
 ## Overview
-This repo illustrates a automatic detection and tracking of single object. In the process, It first detects all the target in the first frame of input videos. Next, we should input a examplar image and it can determine the initial position of the target that is most similar to the examplar image. Finally the tracker could finish the single object tracking.
+This repo illustrates a automatic detection and tracking of single object. In the process, It first detects all the objects in the first frame of input videos. Next, we should input a examplar image and it can determine the initial position of the target that is most similar to the examplar image. Finally the tracker could finish the single object tracking.
 ## Key files in this repo
-* demo.py
+  * demo.py -- implements the detection, identify and tracking pipeline.
+  * `detection folder` -- Faster RCNN detection
+  * `identify folder` -- phash to identify tracking object
+  * `videos folder` -- videos needed to handle
+ * examplar.png -- a snapshot of object to track
+## Notes
+### Detection
+It use Faster RCNN to finish object detection. This code was based on longcw's repo [longcw/faster_rcnn_pytorch](https://github.com/longcw/faster_rcnn_pytorch). It will be improved according to the latest papers.
+### Identify
+It use **phash** to identify a special object.I will add Siamese Net and traditional Digital image processing to do it in the future.
+### Tracking
+It use SiamRPN to finish object tracking. The codes was based on [huanglianghua/siamrpn-pytorch](https://github.com/huanglianghua/siamrpn-pytorch). It will be improved according to the latest papers(**DSiamRPN**).
+## Installation and demo
+
+## Test
+In the root directory of `Object-Detection-And-Tracking`:
+  1. Download the pretrained `model.pth` and `VGGnet_fast_rcnn_iter_70000`  from [Baidu Yun](https://pan.baidu.com/s/1hoTAVaREj4oZrc8HdtNlDA) with extraction code **gm4f** and put the files under `pretrained/`. 
+  2. Run:
+  ```
+  python demo.py
+  ```
+  
