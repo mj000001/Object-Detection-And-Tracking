@@ -32,7 +32,7 @@ It use SiamRPN to finish object tracking. The codes was based on [huanglianghua/
   
   In the root directory of `Object-Detection-And-Tracking`:Download the pretrained `model.pth` and `VGGnet_fast_rcnn_iter_70000`  from [Baidu Yun](https://pan.baidu.com/s/1hoTAVaREj4oZrc8HdtNlDA) with extraction code **gm4f** and put the files under `pretrained/`.  
   
-  4.Compilation:
+  4. Compilation:
   
   Install python package
   ```
