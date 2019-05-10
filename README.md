@@ -19,6 +19,8 @@ It use SiamRPN to finish object tracking. The codes was based on [huanglianghua/
 * Python 3.6
 * PyTorch 0.4.0 or higher
 * CUDA 8.0 or higher
+### For example
+It will detects all cars in the first frame.
 ## Installation and demo
   1. Clone the code:
   ```
@@ -48,4 +50,3 @@ It use SiamRPN to finish object tracking. The codes was based on [huanglianghua/
   ```
   python demo.py
   ```
-  
